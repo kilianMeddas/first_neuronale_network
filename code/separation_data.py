@@ -4,8 +4,8 @@ import random
 
 def split_train_val(source_dir, dest_dir, train_ratio=0.8):
     """
-    source_dir : chemin du dossier contenant toutes les classes (ex : "pytorch_cnn/data/animals_original")
-                 avec la structure :
+    source_dir : chemin du dossier contenant toutes les classes à séparer (ex : "pytorch_cnn/data/animals_original")
+                avec la structure :
                      animals_original/
                          elephant/
                          gorilla/
@@ -58,6 +58,6 @@ def split_train_val(source_dir, dest_dir, train_ratio=0.8):
             print(f"Classe '{class_name}': {len(train_images)} en train, {len(val_images)} en val.")
 
 if __name__ == "__main__":
-    source_dir = "pytorch_cnn/data/animals"  # dossier où se trouvent tes classes
+    source_dir = "pytorch_cnn/data/animals"  # dossier où se trouvent les classes
     dest_dir   = "test_moi/data_sep"          # dossier final avec train/val
     split_train_val(source_dir, dest_dir, train_ratio=0.8)
